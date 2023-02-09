@@ -14,7 +14,7 @@ QUESTION_LINK = "https://practice.geeksforgeeks.org/problems/triangle-pattern-16
 
 # SOLUTION:-
 
-n = 5;
+n = 5
 c = 1
 
 for i in range(1, n + 1):
