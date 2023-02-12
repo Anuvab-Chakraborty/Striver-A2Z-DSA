@@ -55,7 +55,7 @@ class Solution:
                 if n//i!=i:c+=n//i
         #print(c)
         return c
-        """
+
 
     def sumOfDivisors(self, n):
 
@@ -64,3 +64,4 @@ class Solution:
         # c+=self.helper(i)
         c += ((n // i) * i)
     return c
+"""
