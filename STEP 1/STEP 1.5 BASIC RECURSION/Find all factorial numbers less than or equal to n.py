@@ -47,8 +47,6 @@ class Solution:
     	    fact.append(fact[-1]*i)
     	    i+=1
     	return fact[:-1]
-"""
-
 l = []
 n = int(input())
 
@@ -70,3 +68,4 @@ for i in l:
         print(i, end=' ')
     else:
         break
+"""
