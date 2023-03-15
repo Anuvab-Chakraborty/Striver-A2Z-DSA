@@ -36,15 +36,3 @@ Constraints:
 1<=N<=105
 """
 
-n = 22074
-c = 0;
-t = n
-while n != 0:
-    p = n % 10;
-    n //= 10
-    if p == 0:
-        continue
-    else:
-        if t % p == 0: c += 1
-# return c
-print(c)

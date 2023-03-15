@@ -27,11 +27,3 @@ Constraints:
 """
 
 
-class Solution:
-    def is_palindrome(self, n):
-        # Code here
-        s = str(n)
-        if s == s[::-1]:
-            return "Yes"
-        else:
-            return "No"

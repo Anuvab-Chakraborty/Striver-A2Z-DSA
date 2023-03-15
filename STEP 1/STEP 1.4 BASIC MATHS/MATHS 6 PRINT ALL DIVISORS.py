@@ -45,23 +45,3 @@ Constraints:
 # User function Template for python3
 
 
-class Solution:
-    """
-    def helper(self,n):
-        c=0
-        for i in range(1,int(math.sqrt(n))+1):
-            if n%i==0:
-                c+=i
-                if n//i!=i:c+=n//i
-        #print(c)
-        return c
-
-
-    def sumOfDivisors(self, n):
-
-        c = 0
-    for i in range(1, n + 1):
-        # c+=self.helper(i)
-        c += ((n // i) * i)
-    return c
-"""

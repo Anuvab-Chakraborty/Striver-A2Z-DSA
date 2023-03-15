@@ -40,15 +40,3 @@ Constraints:
 """
 
 
-class Solution:
-    def helper(self, a, b):
-        if b == 0:
-            return a
-        else:
-            return self.helper(b, a % b)
-
-    def lcmAndGcd(self, a, b):
-        # code here
-        x = self.helper(a, b)
-        y = (a * b) // x
-        return y, x

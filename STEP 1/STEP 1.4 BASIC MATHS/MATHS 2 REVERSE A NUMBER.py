@@ -40,18 +40,3 @@ Constraints:
 """
 
 
-class Solution:
-    def reversedBits(self, n):
-        # code here
-        s = "";
-        c = 0
-        while n != 0:
-            if n % 2 != 0:
-                s += "1"
-                n //= 2
-            else:
-                s += "0";n //= 2
-        s1 = s + "0" * (32 - len(s))
-        for i in range(31, -1, -1):
-            if s1[i] != "0": c += 2 ** (31 - i)
-        return c
