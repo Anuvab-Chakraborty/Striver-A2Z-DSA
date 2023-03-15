@@ -1,3 +1,4 @@
+"""
 n = int(input())
 l = [-1] * (n + 1)
 
@@ -16,3 +17,4 @@ def fib(n):
 
 print(fib(n))
 print(*l)
+"""

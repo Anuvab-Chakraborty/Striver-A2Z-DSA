@@ -36,3 +36,16 @@ Constraints:
 1<=N<=105
 """
 
+
+# Solution:
+
+class Solution:
+    def evenlyDivides(self, n):
+        temp = n
+        cnt = 0
+        while temp > 0:
+            digits = temp % 10
+            if digits != 0 and n % digits == 0:
+                cnt += 1
+            temp //= 10
+        return cnt

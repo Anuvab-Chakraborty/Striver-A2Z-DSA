@@ -33,19 +33,3 @@ Constraints:
 1<=N<=50000
 
 """
-
-
-class Solution:
-    def sumOfSeries(self, n):
-        # code here
-        sum = 0
-        for i in range(1, n + 1):
-            sum += i * i * i
-        return sum
-
-
-"""
-        if n==0:return 0 
-        else:
-            return n**3 + self.sumOfSeries(n-1)
-        """
