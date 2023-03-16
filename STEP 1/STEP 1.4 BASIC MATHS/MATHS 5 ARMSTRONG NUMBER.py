@@ -30,3 +30,15 @@ Constraints:
 """
 
 
+class Solution:
+    def armstrongNumber(ob, n):
+        p = n;
+        s = 0
+        while p > 0:
+            q = p % 10
+            s += q * q * q
+            p //= 10
+        if s == n:
+            return "Yes"
+        else:
+            return "No"

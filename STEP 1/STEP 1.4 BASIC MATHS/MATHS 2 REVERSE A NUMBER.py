@@ -36,7 +36,18 @@ Expected Auxiliary Space: O(1)
 Constraints:
 0 <= X < 232
 
-
 """
 
-
+class Solution:
+    def reversedBits(self, x):
+        c = 0;
+        s = ""
+        while x >= 1:
+            if x % 2 == 0:
+                s += "0"
+            else:
+                s += "1"
+            x //= 2
+        for i in range(len(s)):
+            c += int(s[i]) * (2 ** (31 - i))
+        return c

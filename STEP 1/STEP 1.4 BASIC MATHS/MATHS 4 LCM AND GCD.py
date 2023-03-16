@@ -38,5 +38,12 @@ Expected Auxiliary Space: O(1)
 Constraints:
 1 <= A,B <= 10**18
 """
+class Solution:
+    def lcmAndGcd(self, a, b):
+        p = self.gcd(a, b)
+        q = (a * b) // p
+        return q, p
 
-
+    def gcd(self, a, b):
+        if b == 0: return a
+        return self.gcd(b, a % b)

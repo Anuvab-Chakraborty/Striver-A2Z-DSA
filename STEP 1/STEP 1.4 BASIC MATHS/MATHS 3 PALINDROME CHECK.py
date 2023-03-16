@@ -26,4 +26,18 @@ Constraints:
 1 <= n <= 1000
 """
 
-
+class Solution:
+    def is_palindrome(self, n):
+        p = n
+        c = 0
+        l = len(str(n))
+        i = 1
+        while p >= 0:
+            q = p % 10
+            c += q * (10 ** (l - i))
+            i += 1
+            p //= 10
+        if c == n:
+            return "Yes"
+        else:
+            return "No"
