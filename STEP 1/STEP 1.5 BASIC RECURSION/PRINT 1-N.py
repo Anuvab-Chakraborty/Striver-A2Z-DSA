@@ -29,3 +29,11 @@ Constraints:
 """
 
 
+def printNos(n):
+    if n > 1:
+        printNos(n - 1)
+    print(n, end=" ")
+    return
+
+
+printNos(10)
