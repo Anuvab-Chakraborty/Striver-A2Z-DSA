@@ -28,7 +28,7 @@ Constraints:
 1 <= N <= 1000
 """
 
-
+"""
 def printNos(n):
     if n > 1:
         printNos(n - 1)
@@ -37,3 +37,31 @@ def printNos(n):
 
 
 printNos(10)
+"""
+
+
+class Solution:
+    # Complete this function
+    def printNos(self, n):
+        c = n - 1
+        # c=1
+        # self.helper(n,c)
+        self.helper(c, n)
+
+    """
+    def helper(self,n,c):
+        if c==n:
+            print(c,end=" ")
+            return
+        print(c,end=" ")
+        return self.helper(n,c+1)
+
+    """
+
+    def helper(self, c, n):
+        if c == 0:
+            print(n, end=" ")
+            return
+        print(n - c, end=" ")
+        self.helper(c - 1, n)
+    # """
