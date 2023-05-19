@@ -53,25 +53,20 @@ Constraints:
 
 """
 
-from collections import Counter
-
-
 class Solution:
-    # Function to count the frequency of all elements from 1 to N in the array.
-    def frequencyCount(self, l, n, P):
-        # code here
-        d = Counter(l)
-        # print(d)
-        """
-        d={};c=0
-        for i in l:
-            if i in d.keys():
-                d[i]+=1
-            else:d[i]=1
-        """
-        # q=d.keys()
-        for i in range(1, n + 1):
-            if i not in d.keys():
-                l[i - 1] = 0
+    #Function to count the frequency of all elements from 1 to N in the array.
+    def frequencyCount(self, arr, N, P):
+        arr.sort()
+        c=0;d={}
+        for i in arr:
+            if i not in d:
+                d[i]=1
             else:
-                l[i - 1] = d[i]
+                d[i]+=1
+        #q=list(d.keys())
+        for i in range(1,N+1):
+            if i in d.keys():
+                arr[i-1]=d[i]
+            else:
+                arr[i-1]=0
+        return arr
